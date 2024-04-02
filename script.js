@@ -5,7 +5,6 @@ let employeesArray = [];
 
 // Collect employee data
 let collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
 
   let addEmployee = true;
 
@@ -35,8 +34,6 @@ const displayAverageSalary = function() {
     alert(`Here is the average ${avgSalary}`)
 
 }
-
-
 
 // Select a random employee
 const getRandomEmployee = function() {
