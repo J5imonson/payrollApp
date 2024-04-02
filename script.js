@@ -7,35 +7,32 @@ let employeesArray = [];
 let collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
 
-let addEmployee = true;
+  let addEmployee = true;
 
 while(addEmployee) {
   let employee = {};
-  employee.firstName = prompt('Employee first name:');
-  employee.lastName = prompt('Employee last name:');
-  employee.salary = parseInt(prompt('Enter employee salary:'),10);
-  employeesArray.push(employee);
-  addEmployee=confirm('Would you like to add another employee?');
+    employee.firstName = prompt('Employee first name:');
+    employee.lastName = prompt('Employee last name:');
+    employee.salary = parseInt(prompt('Enter employee salary:'),10);
+    employeesArray.push(employee);
+    addEmployee=confirm('Would you like to add another employee?');
 };
 
 displayEmployees();
-// displayAverageSalary()
-// return(employeeArray);
 
-// console.log(firstName, lastName, salary)
 }
 
 // Display the average salary
 const displayAverageSalary = function() {
   let ttlSalary = 0
-  for( let i=0; i < employeesArray.length; i++) {
-    const obj = employeesArray[i]
-    console.log(obj.salary)
-    ttlSalary += obj.salary
+    for( let i=0; i < employeesArray.length; i++) {
+      const obj = employeesArray[i]
+        console.log(obj.salary)
+        ttlSalary += obj.salary
   }
 
   const avgSalary = ttlSalary / employeesArray.length
-  alert(`Here is the average ${avgSalary}`)
+    alert(`Here is the average ${avgSalary}`)
 
 }
 
@@ -43,6 +40,9 @@ const displayAverageSalary = function() {
 
 // Select a random employee
 const getRandomEmployee = function() {
+    const rndmEmp = employeesArray[Math.floor(Math.random() * employeesArray.length)];
+      console.log(rndmEmp)
+        alert(`Congratulations, ${rndmEmp.firstName}!`);
   // TODO: Select and display a random employee
 }
 
