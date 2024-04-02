@@ -31,16 +31,14 @@ const displayAverageSalary = function() {
   }
 
   const avgSalary = ttlSalary / employeesArray.length
-    alert(`Here is the average ${avgSalary}`)
+    console.log(`Our average employee salary is ${avgSalary}`)
 
 }
 
 // Select a random employee
 const getRandomEmployee = function() {
     const rndmEmp = employeesArray[Math.floor(Math.random() * employeesArray.length)];
-      console.log(rndmEmp)
-        alert(`Congratulations, ${rndmEmp.firstName}!`);
-  // TODO: Select and display a random employee
+      console.log(`Congratulations to our random sweepstakes winner, ${rndmEmp.firstName}${rndmEmp.lastName}!`);
 }
 
 /*
